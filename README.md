@@ -8,20 +8,15 @@
 			padding: 7px;
 		}
 		</style>
-		
 		<link rel="stylesheet" href="css_and_js/style.css" type="text/css" media="print, projection, screen" />
-
 		<script type="text/javascript" src="css_and_js/jquery-latest.js"></script> 
-
 		<script type="text/javascript" src="css_and_js/jquery.tablesorter.js"></script> 
-
 		<script type="text/javascript">
 			$(function() {
 				$("#myTable").tablesorter();
 			});
 		</script>
 	</head>
-
 <body>
 
 
@@ -65,12 +60,8 @@ Number of Submissions: 0
 		<td> test4.c </td>
 		<td> 1: Hard </td>
 		<td> 99.96 </td>
-	</tr>
-
-
-	
+	</tr>	
 </tbody> 
 </table>
-
 </body>
 </html>
