@@ -8,8 +8,6 @@
 			padding: 7px;
 		}
 		</style>
-		
-		<link rel="stylesheet" href="css_and_js/style.css" type="text/css" media="print, projection, screen" />
 
 		<script type="text/javascript" src="css_and_js/jquery-latest.js"></script> 
 
