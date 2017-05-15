@@ -1,25 +1,3 @@
-<html>
-	<head>
-		<style>
-		table, th, td {
-			border: 1px solid black;
-		}
-		th, td {
-			padding: 7px;
-		}
-		</style>
-		<link rel="stylesheet" href="css_and_js/style.css" type="text/css" media="print, projection, screen" />
-		<script type="text/javascript" src="css_and_js/jquery-latest.js"></script> 
-		<script type="text/javascript" src="css_and_js/jquery.tablesorter.js"></script> 
-		<script type="text/javascript">
-			$(function() {
-				$("#myTable").tablesorter();
-			});
-		</script>
-	</head>
-<body>
-
-
 <h1> Leet Code submissions by Pradeep Kashyap Ramaswamy </h1>
 Number of Submissions: 0
 https://pradeep0605.github.io/Leetcode/
@@ -64,5 +42,3 @@ https://pradeep0605.github.io/Leetcode/
 	</tr>	
 </tbody> 
 </table>
-</body>
-</html>
