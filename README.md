@@ -1,6 +1,9 @@
 <h1> Leet Code submissions by Pradeep Kashyap Ramaswamy </h1>
+
+Sortable version of the table below can be found here: <a href="https://pradeep0605.github.io/Leetcode/"> https://pradeep0605.github.io/Leetcode/ /a>
+
 Number of Submissions: 0
-https://pradeep0605.github.io/Leetcode/
+
 
 <table id="myTable" class="tablesorter" style="width:100%">
 <thead> 
