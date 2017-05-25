@@ -79,3 +79,5 @@ if __name__ == "__main__":
 		subprocess.call(["git", "add", "index.md"])
 		subprocess.call(["git", "add", "code/"])
 		subprocess.call(["git", "add", "upload.py"])
+		subprocess.call(["git", "commit", "-m", "\"Checking-in" + prob_name + " Problem\""])
+		subprocess.call(["git", "push"])
