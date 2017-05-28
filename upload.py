@@ -48,16 +48,16 @@ if __name__ == "__main__":
 	record = record + "\t\t\t<td> " + str(number) + " </td>\n"
 	record = record + "\t\t\t<td> " + "<a href=\"" + prob_url + "\" target=\"_blank\">" + prob_name +  " </a> </td>\n"
 	file_name = "_".join(prob_name.split()) + "." + prog_language
-	record = record + "\t\t\t<td> " + "<a href=\"code/" + toughness_list[toughness] 
-	record = record + "/" + file_name + "\" target=\"_blank\"> " + file_name + " </a> </td>\n"
+	record = record + "\t\t\t<td> " + "<a href=\"https://github.com/pradeep0605/Leetcode/blob/master/code/" + toughness_list[toughness] 
+	record = record + "/" + file_name + "?raw=true\" target=\"_blank\"> " + file_name + " </a> </td>\n"
 	record = record + "\t\t\t<td> " + toughness_list2[toughness] + " </td>\n"
 	record = record + "\t\t\t<td> " + str(percentail) + " </td>\n"
 	record = record + "\t\t\t<td> " + comments + " </td>\n"
 	
 	word_file_name = "_".join(prob_name.split()) + ".docx"
 	
-	record = record + "\t\t\t<td> " + "<a href=\"code/" + toughness_list[toughness] 
-	record = record + "/" + word_file_name + "\" target=\"_blank\"> " + word_file_name + " </a> </td>\n"
+	record = record + "\t\t\t<td> " + "<a href=\"https://github.com/pradeep0605/Leetcode/blob/master/code/" + toughness_list[toughness] 
+	record = record + "/" + word_file_name + "?raw=true\" target=\"_blank\"> " + word_file_name + " </a> </td>\n"
 	
 	record = "\t\t<tr>\n" + record + "\t\t</tr>\n"
 	
