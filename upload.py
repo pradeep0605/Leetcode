@@ -72,6 +72,8 @@ if __name__ == "__main__":
 	
 	out_file = open("index.html", "w")
 	out_file.writelines(result)
+	out_file.close()
+
 	print "========== All Files Created ================================="
 	print "Sure you want to commit to git ? (Y/N)"
 	decision = sys.stdin.readline().strip()
@@ -80,5 +82,5 @@ if __name__ == "__main__":
 		subprocess.Popen(["git", "add", "index.html"]).wait()
 		subprocess.Popen(["git", "add", "code/"]).wait()
 		subprocess.Popen(["git", "add", "upload.py"]).wait()
-		subprocess.Popen(["git", "commit", "-m", "\"Checking-in" + prob_name + " Problem\""]).wait()
+		subprocess.Popen(["git", "commit", "-m", "\"Checking-in: " + prob_name + " Problem\""]).wait()
 		subprocess.Popen(["git", "push"]).wait()
