@@ -33,7 +33,7 @@ if __name__ == "__main__":
 	comments = sys.stdin.readline()
 	comments = comments.strip()
 	
-	index_md = open("index.md","r+")
+	index_md = open("index.html","r+")
 	lines = index_md.readlines()
 	
 	number = int(lines[number_of_programs_line].split(":")[1])
@@ -41,15 +41,15 @@ if __name__ == "__main__":
 	tempo = lines[number_of_programs_line]
 	tempo = tempo.split(":")[:1]
 	tempo = "".join(tempo) + ": " + str(number)
-	lines[number_of_programs_line] = tempo
+	lines[number_of_programs_line] = tempo + "\n"
 	
 	print "New record's Number :", number, " and line: " + lines[number_of_programs_line]
 	record = ""
 	record = record + "\t\t\t<td> " + str(number) + " </td>\n"
-	record = record + "\t\t\t<td> " + "<a href=\"" + prob_url + "\"> " + prob_name +  " </a> </td>\n"
+	record = record + "\t\t\t<td> " + "<a href=\"" + prob_url + "\" target=\"_blank\">" + prob_name +  " </a> </td>\n"
 	file_name = "_".join(prob_name.split()) + "." + prog_language
 	record = record + "\t\t\t<td> " + "<a href=\"code/" + toughness_list[toughness] 
-	record = record + "/" + file_name + "\"> " + file_name + " </a> </td>\n"
+	record = record + "/" + file_name + "\" target=\"_blank\"> " + file_name + " </a> </td>\n"
 	record = record + "\t\t\t<td> " + toughness_list2[toughness] + " </td>\n"
 	record = record + "\t\t\t<td> " + str(percentail) + " </td>\n"
 	record = record + "\t\t\t<td> " + comments + " </td>\n"
@@ -57,7 +57,7 @@ if __name__ == "__main__":
 	word_file_name = "_".join(prob_name.split()) + ".docx"
 	
 	record = record + "\t\t\t<td> " + "<a href=\"code/" + toughness_list[toughness] 
-	record = record + "/" + word_file_name + "\"> " + word_file_name + " </a> </td>\n"
+	record = record + "/" + word_file_name + "\" target=\"_blank\"> " + word_file_name + " </a> </td>\n"
 	
 	record = "\t\t<tr>\n" + record + "\t\t</tr>\n"
 	
@@ -70,14 +70,15 @@ if __name__ == "__main__":
 	tempo =[record]
 	result = lines[:len(lines) - 4] + tempo + lines[len(lines) - 4:]
 	
-	out_file = open("index.md", "w")
+	out_file = open("index.html", "w")
 	out_file.writelines(result)
 	print "========== All Files Created ================================="
 	print "Sure you want to commit to git ? (Y/N)"
-	decision = sys.in.readline();
+	decision = sys.stdin.readline().strip()
 	if decision == "Y" or decision == "y" or decision == "Yes" or decision == "YES":
-		subprocess.call(["git", "add", "index.md"])
-		subprocess.call(["git", "add", "code/"])
-		subprocess.call(["git", "add", "upload.py"])
-		subprocess.call(["git", "commit", "-m", "\"Checking-in" + prob_name + " Problem\""])
-		subprocess.call(["git", "push"])
+		print "Uploading tot git"
+		subprocess.Popen(["git", "add", "index.html"]).wait()
+		subprocess.Popen(["git", "add", "code/"]).wait()
+		subprocess.Popen(["git", "add", "upload.py"]).wait()
+		subprocess.Popen(["git", "commit", "-m", "\"Checking-in" + prob_name + " Problem\""]).wait()
+		subprocess.Popen(["git", "push"]).wait()
